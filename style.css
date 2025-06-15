@@ -495,7 +495,13 @@ body {
     }
     
     .spots-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .spot-card {
+        width: 90%;
+        margin: 0 auto;
     }
     
     .gallery-grid {
