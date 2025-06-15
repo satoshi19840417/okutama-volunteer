@@ -8,8 +8,8 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #1a1a1a;
-    background-color: #e8f0e8;
+    color: #2c3e50;
+    background-color: #f0f7f0;
     padding-top: 90px; /* Adjusted based on header height */
 }
 
@@ -21,8 +21,8 @@ body {
 
 /* ヘッダー */
 .header {
-    background-color: #2c4a2c;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    background-color: #e8f5e9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
@@ -64,7 +64,7 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #2c3e50;
     margin-right: 2rem;
 }
 
@@ -86,18 +86,18 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffff;
+    color: #2c3e50;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #a8d8a8;
+    color: #3498db;
 }
 
 .volunteer-link {
     font-size: 1.1rem;
-    color: #ffffff;
+    color: #2c3e50;
 }
 
 .volunteer-link a {
@@ -138,13 +138,18 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
@@ -161,14 +166,29 @@ body {
 /* セクション共通 */
 .section {
     padding: 5rem 0;
-    background-color: #e8f0e8;
+    background-color: #f0f7f0;
+    position: relative;
+    z-index: 1;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: -1;
 }
 
 .section h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: #1a3d1a;
+    color: #1b5e20;
     margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
 }
 
 /* 奥多摩とは */
@@ -177,12 +197,21 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.about-text {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .about-text p {
     margin-bottom: 1rem;
     font-size: 1.1rem;
-    color: #1a1a1a;
+    color: #2c3e50;
 }
 
 .about-image img {
@@ -196,6 +225,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .spot-card {
@@ -205,6 +236,8 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
 }
 
 .spot-card:hover {
@@ -225,12 +258,12 @@ body {
 
 .spot-card h3 {
     padding: 1rem;
-    color: #1a3d1a;
+    color: #1b5e20;
 }
 
 .spot-card p {
     padding: 0 1rem 1rem;
-    color: #1a1a1a;
+    color: #2c3e50;
 }
 
 /* ギャラリー */
@@ -284,14 +317,16 @@ body {
 
 /* アクセス */
 .access-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .access-info {
-    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .access-info p {
@@ -320,8 +355,8 @@ body {
 
 /* フッター */
 .footer {
-    background-color: #2c4a2c;
-    color: #ffffff;
+    background-color: #e8f5e9;
+    color: #2c3e50;
     padding: 3rem 0 1rem;
 }
 
@@ -333,12 +368,12 @@ body {
 }
 
 .footer-info h3 {
-    color: #ffffff;
+    color: #1b5e20;
     margin-bottom: 1rem;
 }
 
 .footer-info p {
-    color: #e0e0e0;
+    color: #2c3e50;
 }
 
 .footer-links {
@@ -356,24 +391,24 @@ body {
 
 .footer-links a {
     text-decoration: none;
-    color: #e0e0e0;
+    color: #2c3e50;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #a8d8a8;
+    color: #1b5e20;
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .footer-bottom p {
     font-size: 0.9rem;
-    color: #e0e0e0;
+    color: #2c3e50;
 }
 
 /* レスポンシブデザイン */
@@ -451,13 +486,16 @@ body {
         line-height: 1.8;
     }
     
-    .about-content,
-    .access-content {
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .about-content {
         grid-template-columns: 1fr;
     }
     
     .spots-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .gallery-grid {
@@ -474,8 +512,8 @@ body {
         justify-content: center;
     }
     
-    .access-content {
-        flex-direction: column;
+    .access-info {
+        padding: 1.5rem;
     }
     
     .map-container iframe {
@@ -935,19 +973,41 @@ body {
 }
 
 #volunteer {
-    background-color: #2c4a2c;
+    background-color: #e8f5e9;
+    position: relative;
+    z-index: 2;
+}
+
+#volunteer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(232, 245, 233, 0.95);
+    z-index: -1;
+}
+
+.volunteer-content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
 }
 
 .volunteer-content p {
-    color: #ffffff;
+    color: #2c3e50;
 }
 
 .volunteer-btn {
-    background-color: #ffffff;
-    color: #2c4a2c;
+    background-color: #2e7d32;
+    color: #ffffff;
 }
 
 .volunteer-btn:hover {
-    background-color: #a8d8a8;
-    color: #1a3d1a;
+    background-color: #1b5e20;
+    color: #ffffff;
 } 
