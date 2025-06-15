@@ -128,6 +128,33 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll();
 
+    // ハンバーガーメニューの制御
+    const hamburger = document.querySelector('.hamburger');
+    const navContainer = document.querySelector('.nav-container');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    // ハンバーガーメニューのトグル
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('is-active');
+        navContainer.classList.toggle('is-active');
+    });
+
+    // メニューリンクをクリックしたときにメニューを閉じる
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('is-active');
+            navContainer.classList.remove('is-active');
+        });
+    });
+
+    // 画面外クリックでメニューを閉じる
+    document.addEventListener('click', function(event) {
+        if (!hamburger.contains(event.target) && !navContainer.contains(event.target)) {
+            hamburger.classList.remove('is-active');
+            navContainer.classList.remove('is-active');
+        }
+    });
+
 }); // DOMContentLoaded 終了
 
 // セクションへのスムーズスクロール (グローバル関数)
