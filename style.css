@@ -525,6 +525,29 @@ body {
     .map-container iframe {
         height: 300px;
     }
+
+    .mv-thumbnails {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .mv-thumbnail-item {
+        width: 90%;
+        max-width: none;
+    }
+
+    .mv-thumbnail-info {
+        padding: 1rem;
+    }
+
+    .mv-thumbnail-info h3 {
+        font-size: 1.1em;
+    }
+
+    .mv-thumbnail-info p {
+        font-size: 0.9em;
+    }
 }
 
 @media (max-width: 480px) {
