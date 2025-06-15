@@ -178,7 +178,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.3);
     z-index: -1;
 }
 
@@ -891,17 +891,33 @@ body {
 
 /* MVページのスタイル */
 .mv-section {
-    padding: 30px 0; /* Adjusted padding */
+    padding: 80px 0;
+    background-image: url('images/動画紹介.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
-    background-image: none; /* Ensure no background image */
-    background-color: transparent; /* Ensure no background color */
-    min-height: auto; /* Remove minimum height */
 }
 
 .mv-section .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.mv-section h1 {
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.mv-intro {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .mv-thumbnails {
@@ -946,6 +962,82 @@ body {
     color: #666;
     margin: 0;
     font-size: 0.9em;
+}
+
+.content-section {
+    background: white;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-title {
+    background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.gdrive-video-title {
+    background: linear-gradient(135deg, #689F38 0%, #A5D6A7 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin: 20px 0;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-note {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #856404;
+}
+
+.content-section p {
+    color: #2c3e50;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.content-section h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    font-size: 1.8em;
 }
 
 #videoModal {
