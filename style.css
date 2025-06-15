@@ -1131,4 +1131,101 @@ body {
 .volunteer-btn:hover {
     background-color: #1b5e20;
     color: #ffffff;
+}
+
+/* 更新情報セクションのスタイル */
+.updates-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.update-item {
+    display: flex;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.update-date {
+    min-width: 120px;
+    padding-right: 1.5rem;
+    color: #666;
+    font-weight: bold;
+}
+
+.update-text h3 {
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.update-text p {
+    margin: 0;
+    color: #666;
+}
+
+/* 次回の活動予定セクションのスタイル */
+.activities-schedule {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.activity-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-date {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 4px;
+}
+
+.activity-date .month {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+}
+
+.activity-date .day {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+}
+
+.activity-details h3 {
+    margin: 0 0 1rem 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.activity-details p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .update-item {
+        flex-direction: column;
+    }
+
+    .update-date {
+        margin-bottom: 1rem;
+        padding-right: 0;
+    }
+
+    .activities-schedule {
+        grid-template-columns: 1fr;
+    }
 } 
