@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MV紹介 - おくたまふれあい農園ボランティア活動</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .mv-section {
+            padding: 80px 0;
+            background-image: url('../images/動画紹介.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 400px;
+        }
+
+        .mv-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .mv-section h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .mv-intro {
+            text-align: center;
+            color: #34495e;
+            font-size: 1.2em;
+            margin-bottom: 50px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .mv-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .mv-thumbnail-item {
+            flex: 1;
+            max-width: 350px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .mv-thumbnail-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .mv-thumbnail-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .mv-thumbnail-info {
+            padding: 15px;
+        }
+
+        .mv-thumbnail-info h3 {
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+        }
+
+        .mv-thumbnail-info p {
+            color: #666;
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .video-title {
+            background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .gdrive-video-title {
+            background: linear-gradient(135deg, #689F38 0%, #A5D6A7 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            margin: 20px 0;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #856404;
+        }
+
+        .content-section p {
+            color: #2c3e50;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+
+        .content-section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo"><a href="index.html">おくたまふれあい農園ボランティア活動</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">農園について</a></li>
+                <li><a href="activities.html">体験活動</a></li>
+                <li><a href="mv.html" class="active">MV</a></li>
+                <li><a href="index.html#access">アクセス</a></li>
+                <li class="volunteer-link">気になる方は<a href="https://juon.or.jp/activity/activity_164.html" target="_blank">こちら</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mv-section">
+            <div class="container">
+                <h1>MV紹介</h1>
+                <p class="mv-intro">奥多摩の魅力を伝える動画コレクション</p>
+
+                <div class="mv-thumbnails">
+                    <div class="mv-thumbnail-item" onclick="document.querySelector('#video1').scrollIntoView({behavior: 'smooth'})">
+                        <img src="images/MVサムネ/私の大切な場所-サムネイル.jpg" alt="私の大切な場所">
+                        <div class="mv-thumbnail-info">
+                            <h3>私の大切な場所</h3>
+                            <p>奥多摩の自然と共に過ごす特別な時間</p>
+                        </div>
+                    </div>
+
+                    <div class="mv-thumbnail-item" onclick="document.querySelector('#video2').scrollIntoView({behavior: 'smooth'})">
+                        <img src="images/MVサムネ/夢の小屋--サムネイル.jpg" alt="僕らの夢の小屋">
+                        <div class="mv-thumbnail-info">
+                            <h3>僕らの夢の小屋</h3>
+                            <p>農園での活動を通じて、仲間たちと一緒に夢の小屋を建てるまでの物語。</p>
+                        </div>
+                    </div>
+
+                    <div class="mv-thumbnail-item" onclick="document.querySelector('#video3').scrollIntoView({behavior: 'smooth'})">
+                        <img src="images/MVサムネ/治歌ちゃんの奥多摩だより-サムネイル.jpg" alt="治歌ちゃんの奥多摩だより">
+                        <div class="mv-thumbnail-info">
+                            <h3>治歌ちゃんの奥多摩だより</h3>
+                            <p>治歌ちゃんが案内する奥多摩の魅力</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section" id="video1">
+                    <h2>私の大切な場所</h2>
+                    <div class="video-title">奥多摩の自然と共に過ごす特別な時間</div>
+                    
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/xxX5lVfck20?rel=0&showinfo=0&modestbranding=1" 
+                            title="私の大切な場所 - 奥多摩の自然動画"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    
+                    <p>奥多摩の豊かな自然環境の中で、心安らぐひとときを映像で表現した作品です。AIの映像なので実際とは異なりますが、奥多摩はいつでもあなたをお待ちしております</p>
+                </div>
+
+                <div class="content-section" id="video2">
+                    <h2>僕らの夢の小屋</h2>
+                    <div class="video-title">自然の素材を使った小屋づくりの記録</div>
+                    
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/Nt-_cZdGoCw?rel=0&showinfo=0&modestbranding=1" 
+                            title="僕らの夢の小屋 - 奥多摩小屋づくり動画"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    
+                    <p>奥多摩の豊富な自然素材を活用した小屋づくりプロジェクトの全貌をご覧ください。伝統的な建築技術と現代的なアイデアが融合した、夢のある取り組みです。</p>
+                </div>
+
+                <div class="content-section" id="video3">
+                    <h2>治歌ちゃんの奥多摩だより</h2>
+                    <div class="video-title">治歌ちゃんが案内する奥多摩の魅力</div>
+                    
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/J9iymGItX1s?rel=0&showinfo=0&modestbranding=1" 
+                            title="治歌ちゃんの奥多摩だより"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    
+                    <p>治歌ちゃんの自己紹介の動画です。奥多摩名物の治助芋の紹介にもなっています！</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>おくたまふれあい農園</h3>
+                    <p>〒198-0212 東京都西多摩郡奥多摩町氷川</p>
+                    <p>電話: 0428-83-2111</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 おくたまふれあい農園 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
