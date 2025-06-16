@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>体験活動 - おくたまふれあい農園ボランティア活動</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="critical.css">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
 </head>
 <body>
     <header class="header">
@@ -22,7 +25,7 @@
                     <li><a href="activities.html" class="active">体験活動</a></li>
                     <li><a href="mv.html">MV</a></li>
                     <li><a href="index.html#access">アクセス</a></li>
-                    <li class="volunteer-link">気になる方は<a href="https://juon.or.jp/activity/activity_164.html" target="_blank">こちら</a></li>
+                    <li class="volunteer-link">気になる方は<a href="https://juon.or.jp/activity/activity_164.html" target="_blank" rel="noopener noreferrer">こちら</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,33 +36,33 @@
                 <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">体験活動</h2>
                 <p style="text-align:center; margin-bottom:2rem; color:white; font-size:1.1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">各活動をクリックするとフォトギャラリーが見れます</p>
                 <div class="spots-grid">
-                    <div class="spot-card" onclick="scrollToSection('wasabi')">
-                        <img src="活動紹介/わさび作り/20241124_105757.jpg" alt="わさび作り体験">
+                    <div class="spot-card" data-scroll-target="wasabi">
+                        <img data-src="活動紹介/わさび作り/20241124_105757.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="わさび作り体験" loading="lazy">
                         <h3>わさび作り体験</h3>
                         <p>秘密の場所で育てるわさび。キレイな水辺で心も癒されます。</p>
                     </div>
-                    <div class="spot-card" onclick="scrollToSection('bbq')">
-                        <img src="活動紹介/川原でBBQ/20230729_130321.jpg" alt="川原でBBQ">
+                    <div class="spot-card" data-scroll-target="bbq">
+                        <img data-src="活動紹介/川原でBBQ/20230729_130321.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="川原でBBQ" loading="lazy">
                         <h3>川原でBBQ</h3>
                         <p>息抜き。きれいな川原でBBQ!</p>
                     </div>
-                    <div class="spot-card" onclick="scrollToSection('yasai')">
-                        <img src="活動紹介/野菜作り/20250503_110347.jpg" alt="野菜作り体験">
+                    <div class="spot-card" data-scroll-target="yasai">
+                        <img data-src="活動紹介/野菜作り/20250503_110347.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="野菜作り体験" loading="lazy">
                         <h3>野菜作り体験</h3>
                         <p>奥多摩の大自然での野菜作り。治助芋は奥多摩名物！</p>
                     </div>
-                    <div class="spot-card" onclick="scrollToSection('pizza')">
-                        <img src="活動紹介/石窯ピザ/20241110_115514.jpg" alt="石窯ピザ作り">
+                    <div class="spot-card" data-scroll-target="pizza">
+                        <img data-src="活動紹介/石窯ピザ/20241110_115514.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="石窯ピザ作り" loading="lazy">
                         <h3>石窯ピザ作り</h3>
                         <p>石窯を使ってピザ作りの体験。もちろん奥多摩の食材がたくさん！</p>
                     </div>
-                    <div class="spot-card" onclick="scrollToSection('gourmet')">
-                        <img src="images/グルメ/20241110_120524.jpg" alt="グルメ体験">
+                    <div class="spot-card" data-scroll-target="gourmet">
+                        <img data-src="images/グルメ/20241110_120524.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="グルメ体験" loading="lazy">
                         <h3>グルメ体験</h3>
                         <p>奥多摩の新鮮な食材を使った料理体験。地元の味を楽しもう！</p>
                     </div>
-                    <div class="spot-card" onclick="scrollToSection('koya')">
-                        <img src="活動紹介/小屋づくり/20250608_170359.jpg" alt="小屋づくり体験">
+                    <div class="spot-card" data-scroll-target="koya">
+                        <img data-src="活動紹介/小屋づくり/20250608_170359.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="小屋づくり体験" loading="lazy">
                         <h3>小屋づくり体験</h3>
                         <p>奥多摩で育った木材で小屋づくりをしています。</p>
                     </div>
@@ -71,10 +74,10 @@
                 <h2>小屋づくりコーナー</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item" data-img="images/小屋づくり/20250505_104818.jpg" data-caption="小屋づくり1">
-                        <img src="images/小屋づくり/20250505_104818.jpg" alt="小屋づくり1">
+                        <img data-src="images/小屋づくり/20250505_104818.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="小屋づくり1" loading="lazy">
                     </div>
                     <div class="gallery-item" data-img="images/小屋づくり/20250505_091205.jpg" data-caption="小屋づくり2">
-                        <img src="images/小屋づくり/20250505_091205.jpg" alt="小屋づくり2">
+                        <img data-src="images/小屋づくり/20250505_091205.jpg" alt="小屋づくり2">
                     </div>
                     <div class="gallery-item" data-img="images/小屋づくり/20250504_143440.jpg" data-caption="小屋づくり3">
                         <img src="images/小屋づくり/20250504_143440.jpg" alt="小屋づくり3">
@@ -172,14 +175,14 @@
                 <h2>わさび作り体験コーナー</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item video-item" data-video="images/わさび作り/20241124_101348.mp4" data-caption="わさび作り動画1">
-                        <video width="100%" height="auto" controls>
-                            <source src="images/わさび作り/20241124_101348.mp4" type="video/mp4">
+                        <video width="100%" height="auto" controls preload="none" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9'%3E%3Crect width='16' height='9' fill='%23000'/%3E%3C/svg%3E">
+                            <source data-src="images/わさび作り/20241124_101348.mp4" type="video/mp4">
                             お使いのブラウザは動画タグをサポートしていません。
                         </video>
                     </div>
                     <div class="gallery-item video-item" data-video="images/わさび作り/20241124_105733.mp4" data-caption="わさび作り動画2">
-                        <video width="100%" height="auto" controls>
-                            <source src="images/わさび作り/20241124_105733.mp4" type="video/mp4">
+                        <video width="100%" height="auto" controls preload="none" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9'%3E%3Crect width='16' height='9' fill='%23000'/%3E%3C/svg%3E">
+                            <source data-src="images/わさび作り/20241124_105733.mp4" type="video/mp4">
                             お使いのブラウザは動画タグをサポートしていません。
                         </video>
                     </div>
@@ -221,8 +224,8 @@
                 <h2>川原でBBQコーナー</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item video-item" data-video="images/川原でBBQ/20230729_112115.mp4" data-caption="川原でBBQ 動画">
-                        <video width="100%" height="auto">
-                            <source src="images/川原でBBQ/20230729_112115.mp4" type="video/mp4">
+                        <video width="100%" height="auto" preload="none" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9'%3E%3Crect width='16' height='9' fill='%23000'/%3E%3C/svg%3E">
+                            <source data-src="images/川原でBBQ/20230729_112115.mp4" type="video/mp4">
                             お使いのブラウザは動画タグをサポートしていません。
                         </video>
                     </div>
@@ -255,8 +258,8 @@
                 <h2>石窯ピザ体験コーナー</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item video-item" data-video="images/石窯ピザ作り/20241110_111558.mp4" data-caption="石窯ピザ作り 動画">
-                        <video width="100%" height="auto">
-                            <source src="images/石窯ピザ作り/20241110_111558.mp4" type="video/mp4">
+                        <video width="100%" height="auto" preload="none" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9'%3E%3Crect width='16' height='9' fill='%23000'/%3E%3C/svg%3E">
+                            <source data-src="images/石窯ピザ作り/20241110_111558.mp4" type="video/mp4">
                             お使いのブラウザは動画タグをサポートしていません。
                         </video>
                     </div>
@@ -292,14 +295,14 @@
                 <h2>グルメ体験コーナー</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item video-item" data-video="images/グルメ/20241208_155833.mp4" data-caption="グルメ体験 動画1">
-                        <video width="100%" height="auto" controls>
-                            <source src="images/グルメ/20241208_155833.mp4" type="video/mp4">
+                        <video width="100%" height="auto" controls preload="none" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9'%3E%3Crect width='16' height='9' fill='%23000'/%3E%3C/svg%3E">
+                            <source data-src="images/グルメ/20241208_155833.mp4" type="video/mp4">
                             お使いのブラウザは動画タグをサポートしていません。
                         </video>
                     </div>
                     <div class="gallery-item video-item" data-video="images/グルメ/20220514_163223.mp4" data-caption="グルメ体験 動画2">
-                        <video width="100%" height="auto" controls>
-                            <source src="images/グルメ/20220514_163223.mp4" type="video/mp4">
+                        <video width="100%" height="auto" controls preload="none" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9'%3E%3Crect width='16' height='9' fill='%23000'/%3E%3C/svg%3E">
+                            <source data-src="images/グルメ/20220514_163223.mp4" type="video/mp4">
                             お使いのブラウザは動画タグをサポートしていません。
                         </video>
                     </div>
@@ -393,6 +396,6 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html> 

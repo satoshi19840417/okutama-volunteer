@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MV紹介 - おくたまふれあい農園ボランティア活動</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="critical.css">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
 </head>
 <body>
     <header class="header">
@@ -22,7 +25,7 @@
                     <li><a href="activities.html">体験活動</a></li>
                     <li><a href="mv.html" class="active">MV</a></li>
                     <li><a href="index.html#access">アクセス</a></li>
-                    <li class="volunteer-link">気になる方は<a href="https://juon.or.jp/activity/activity_164.html" target="_blank">こちら</a></li>
+                    <li class="volunteer-link">気になる方は<a href="https://juon.or.jp/activity/activity_164.html" target="_blank" rel="noopener noreferrer">こちら</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,24 +38,24 @@
                 <p class="mv-intro">奥多摩の魅力を伝える動画コレクション</p>
 
                 <div class="mv-thumbnails">
-                    <div class="mv-thumbnail-item" onclick="document.querySelector('#video1').scrollIntoView({behavior: 'smooth'})">
-                        <img src="images/MVサムネ/私の大切な場所-サムネイル.jpg" alt="私の大切な場所">
+                    <div class="mv-thumbnail-item" data-scroll-target="video1">
+                        <img data-src="images/MVサムネ/私の大切な場所-サムネイル.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="私の大切な場所" loading="lazy">
                         <div class="mv-thumbnail-info">
                             <h3>私の大切な場所</h3>
                             <p>奥多摩の自然と共に過ごす特別な時間</p>
                         </div>
                     </div>
 
-                    <div class="mv-thumbnail-item" onclick="document.querySelector('#video2').scrollIntoView({behavior: 'smooth'})">
-                        <img src="images/MVサムネ/夢の小屋--サムネイル.jpg" alt="僕らの夢の小屋">
+                    <div class="mv-thumbnail-item" data-scroll-target="video2">
+                        <img data-src="images/MVサムネ/夢の小屋--サムネイル.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="僕らの夢の小屋" loading="lazy">
                         <div class="mv-thumbnail-info">
                             <h3>僕らの夢の小屋</h3>
                             <p>農園での活動を通じて、仲間たちと一緒に夢の小屋を建てるまでの物語。</p>
                         </div>
                     </div>
 
-                    <div class="mv-thumbnail-item" onclick="document.querySelector('#video3').scrollIntoView({behavior: 'smooth'})">
-                        <img src="images/MVサムネ/治歌ちゃんの奥多摩だより-サムネイル.jpg" alt="治歌ちゃんの奥多摩だより">
+                    <div class="mv-thumbnail-item" data-scroll-target="video3">
+                        <img data-src="images/MVサムネ/治歌ちゃんの奥多摩だより-サムネイル.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="治歌ちゃんの奥多摩だより" loading="lazy">
                         <div class="mv-thumbnail-info">
                             <h3>治歌ちゃんの奥多摩だより</h3>
                             <p>治歌ちゃんが案内する奥多摩の魅力</p>
@@ -132,6 +135,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html> 

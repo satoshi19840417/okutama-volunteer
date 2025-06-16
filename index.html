@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>おくたま梅沢ふれあい農園 - 自然と農業の体験</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="critical.css">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
 </head>
 <body>
     <header class="header">
@@ -22,7 +25,7 @@
                     <li><a href="activities.html">体験活動</a></li>
                     <li><a href="mv.html">MV</a></li>
                     <li><a href="#access">アクセス</a></li>
-                    <li class="volunteer-link">気になる方は<a href="https://juon.or.jp/activity/activity_164.html" target="_blank">こちら</a></li>
+                    <li class="volunteer-link">気になる方は<a href="https://juon.or.jp/activity/activity_164.html" target="_blank" rel="noopener noreferrer">こちら</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,7 +48,7 @@
                         <p>都心から約2時間でアクセスできる、自然と農業を学び、楽しめる癒しのスポットです。</p>
                     </div>
                     <div class="about-image">
-                        <img src="images/農園の風景.jpg" alt="農園の景色">
+                        <img data-src="images/農園の風景.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="農園の景色" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -57,32 +60,32 @@
                 <p style="text-align:center; margin-bottom:2rem; color:#555; font-size:1.1rem;">各活動をクリックするとフォトギャラリーが見れます</p>
                 <div class="spots-grid">
                     <a href="activities.html#wasabi" style="text-decoration:none;color:inherit;"><div class="spot-card">
-                        <img src="活動紹介/わさび作り/20241124_105757.jpg" alt="わさび作り体験">
+                        <img data-src="活動紹介/わさび作り/20241124_105757.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="わさび作り体験" loading="lazy">
                         <h3>わさび作り体験</h3>
                         <p>秘密の場所で育てるわさび。キレイな水辺で心も癒されます。</p>
                     </div></a>
                     <a href="activities.html#bbq" style="text-decoration:none;color:inherit;"><div class="spot-card">
-                        <img src="活動紹介/川原でBBQ/20230729_130321.jpg" alt="川原でBBQ">
+                        <img data-src="活動紹介/川原でBBQ/20230729_130321.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="川原でBBQ" loading="lazy">
                         <h3>川原でBBQ</h3>
                         <p>息抜き。きれいな川原でBBQ!</p>
                     </div></a>
                     <a href="activities.html#yasai" style="text-decoration:none;color:inherit;"><div class="spot-card">
-                        <img src="活動紹介/野菜作り/20250503_110347.jpg" alt="野菜作り体験">
+                        <img data-src="活動紹介/野菜作り/20250503_110347.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="野菜作り体験" loading="lazy">
                         <h3>野菜作り体験</h3>
                         <p>奥多摩の大自然での野菜作り。治助芋は奥多摩名物！</p>
                     </div></a>
                     <a href="activities.html#pizza" style="text-decoration:none;color:inherit;"><div class="spot-card">
-                        <img src="活動紹介/石窯ピザ/20241110_115514.jpg" alt="石窯ピザ作り">
+                        <img data-src="活動紹介/石窯ピザ/20241110_115514.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="石窯ピザ作り" loading="lazy">
                         <h3>石窯ピザ作り</h3>
                         <p>石窯を使ってピザ作りの体験。もちろん奥多摩の食材がたくさん！</p>
                     </div></a>
                     <a href="activities.html#koya" style="text-decoration:none;color:inherit;"><div class="spot-card">
-                        <img src="活動紹介/小屋づくり/20250608_170359.jpg" alt="小屋づくり体験">
+                        <img data-src="活動紹介/小屋づくり/20250608_170359.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="小屋づくり体験" loading="lazy">
                         <h3>小屋づくり体験</h3>
                         <p>奥多摩で育った木材で小屋づくりをしています。</p>
                     </div></a>
                     <a href="activities.html#gourmet" style="text-decoration:none;color:inherit;"><div class="spot-card">
-                        <img src="images/グルメ/20220911_120840.jpg" alt="グルメ体験">
+                        <img data-src="images/グルメ/20220911_120840.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="グルメ体験" loading="lazy">
                         <h3>グルメ体験</h3>
                         <p>奥多摩の新鮮な食材を使った料理体験。地元の味を楽しもう！</p>
                     </div></a>
@@ -102,7 +105,7 @@
                         </div>
                         <div class="video-preview-image">
                             <!-- <iframe src="https://drive.google.com/file/d/1S-bKH9-LBEr5w3-Q9veJMsAgEOpSDFyO/embed" width="100%" height="315" allow="autoplay"></iframe> -->
-                            <img src="images/MVサムネ/夢の小屋--サムネイル.jpg" alt="動画プレビュー" style="width:100%; height:315px; object-fit:cover;">
+                            <img data-src="images/MVサムネ/夢の小屋--サムネイル.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="動画プレビュー" style="width:100%; height:315px; object-fit:cover;" loading="lazy">
                             <!-- <div class="play-overlay">
                                 <i class="fas fa-play"></i>
                             </div> -->
@@ -209,7 +212,7 @@
                         森林ボランティア活動を通じて、自然と触れ合い、新しい仲間と出会いませんか？<br>
                         初心者の方も大歓迎です。詳しい情報はこちらからご覧ください。
                     </p>
-                    <a href="https://juon.or.jp/activity/activity_164.html" target="_blank" class="volunteer-btn" style="display: inline-block; padding: 1rem 2rem; background-color: #e74c3c; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: all 0.3s ease;">
+                    <a href="https://juon.or.jp/activity/activity_164.html" target="_blank" rel="noopener noreferrer" class="volunteer-btn" style="display: inline-block; padding: 1rem 2rem; background-color: #e74c3c; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: all 0.3s ease;">
                         詳しく見る <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -234,7 +237,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // モーダル要素の取得

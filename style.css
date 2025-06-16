@@ -5,6 +5,33 @@
     box-sizing: border-box;
 }
 
+/* パフォーマンス最適化 */
+img {
+    content-visibility: auto;
+    contain: layout style paint;
+}
+
+video {
+    content-visibility: auto;
+    contain: layout style paint;
+}
+
+.gallery-grid {
+    contain: layout style paint;
+}
+
+/* 画像読み込み改善 */
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* WebP対応は JavaScriptで処理するため削除 */
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
