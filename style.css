@@ -9,11 +9,15 @@
 img {
   content-visibility: auto;
   contain: layout style paint;
+  max-width: 100%;
+  height: auto;
 }
 
 video {
   content-visibility: auto;
   contain: layout style paint;
+  max-width: 100%;
+  height: auto;
 }
 
 .gallery-grid {
@@ -28,6 +32,13 @@ img[data-src] {
 
 img.loaded {
   opacity: 1;
+}
+
+/* レスポンシブ画像 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* WebP対応は JavaScriptで処理するため削除 */
