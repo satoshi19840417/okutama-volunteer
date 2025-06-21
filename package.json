@@ -1,0 +1,35 @@
+{
+  "name": "okutama-volunteer",
+  "version": "1.0.0",
+  "description": "奥多摩ボランティア活動管理サイト",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "image:opt": "node optimize-images.js",
+    "postbuild": "node postbuild-inline-css.js",
+    "convert-to-webp": "node convert-to-webp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satoshi19840417/okutama-volunteer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satoshi19840417/okutama-volunteer/issues"
+  },
+  "homepage": "https://github.com/satoshi19840417/okutama-volunteer#readme",
+  "devDependencies": {
+    "critters": "^0.0.23",
+    "rollup": "^3.29.0",
+    "sharp": "^0.34.2",
+    "vite": "^4.5.0"
+  },
+  "dependencies": {
+    "@jimp/cli": "^0.21.3",
+    "glob": "^11.0.3",
+    "jimp": "^0.22.12"
+  }
+}
