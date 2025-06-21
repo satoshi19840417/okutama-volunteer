@@ -93,4 +93,4 @@ jobs:
           message: |
             Lighthouse CI スコア:
             (詳細は Netlify Preview で確認)
-            (自動コメント例: 実際のスコアは LHCI の出力を参照) 
+            (自動コメント例: 実際のスコアは LHCI の出力を参照)

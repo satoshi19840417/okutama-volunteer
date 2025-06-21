@@ -10,7 +10,8 @@ export default function HeroVideo() {
             <div className="video-preview-text">
               <h3>ミュージックビデオで紹介する魅力</h3>
               <p>
-                農園での楽しい活動や奥多摩の魅力をミュージックビデオにてご紹介！<br />
+                農園での楽しい活動や奥多摩の魅力をミュージックビデオにてご紹介！
+                <br />
                 あなたのお気に入りの曲を見つけてね
               </p>
               <a href="mv.html" className="btn-video">
@@ -36,4 +37,4 @@ export default function HeroVideo() {
       </div>
     </section>
   );
-} 
+}

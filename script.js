@@ -45,9 +45,18 @@ window.addEventListener("scroll", optimizedScrollHandler, { passive: true });
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      const headerHeight = window.innerWidth <= 768 ? 60 : 80; // モバイルでは60px、デスクトップでは80px
+      const targetPosition = targetElement.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
+    }
   });
 });
 
@@ -222,6 +231,82 @@ document.addEventListener("DOMContentLoaded", function () {
     navContainer.classList.toggle("is-active");
   });
 
+  // サブメニューの制御（＋ボタンクリック）
+  const submenuToggles = document.querySelectorAll(".submenu-toggle");
+  submenuToggles.forEach((toggle) => {
+    // クリックイベント
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleSubmenu(this);
+    });
+    
+    // タッチイベント（モバイル用）
+    toggle.addEventListener("touchstart", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleSubmenu(this);
+    });
+  });
+
+  // サブメニューのトグル関数
+  function toggleSubmenu(toggle) {
+    const navItem = toggle.closest(".nav-item-with-submenu");
+    const submenu = navItem.querySelector(".submenu");
+    
+    // 他のサブメニューを閉じる
+    document.querySelectorAll(".submenu").forEach((menu) => {
+      if (menu !== submenu) {
+        menu.classList.remove("is-active");
+      }
+    });
+    
+    document.querySelectorAll(".submenu-toggle").forEach((btn) => {
+      if (btn !== toggle) {
+        btn.classList.remove("is-active");
+      }
+    });
+    
+    // 現在のサブメニューをトグル
+    submenu.classList.toggle("is-active");
+    toggle.classList.toggle("is-active");
+  }
+
+  // サブメニュー内のリンクをクリックしたときの処理
+  document.querySelectorAll(".submenu a").forEach((link) => {
+    link.addEventListener("click", function () {
+      // モバイルではハンバーガーメニューを閉じる
+      if (window.innerWidth <= 768) {
+        const hamburger = document.querySelector(".hamburger");
+        const navContainer = document.querySelector(".nav-container");
+        if (hamburger && navContainer) {
+          hamburger.classList.remove("is-active");
+          navContainer.classList.remove("is-active");
+        }
+        // サブメニューも閉じる
+        const navItem = this.closest(".nav-item-with-submenu");
+        const submenu = navItem.querySelector(".submenu");
+        const toggle = navItem.querySelector(".submenu-toggle");
+        if (submenu && toggle) {
+          submenu.classList.remove("is-active");
+          toggle.classList.remove("is-active");
+        }
+      }
+    });
+  });
+
+  // サブメニュー外をクリックしたときに閉じる
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".nav-item-with-submenu")) {
+      document.querySelectorAll(".submenu").forEach((submenu) => {
+        submenu.classList.remove("is-active");
+      });
+      document.querySelectorAll(".submenu-toggle").forEach((toggle) => {
+        toggle.classList.remove("is-active");
+      });
+    }
+  });
+
   // メニューリンクをクリックしたときにメニューを閉じる
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
@@ -254,6 +339,12 @@ document.addEventListener("DOMContentLoaded", function () {
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
+    const headerHeight = window.innerWidth <= 768 ? 60 : 80; // モバイルでは60px、デスクトップでは80px
+    const targetPosition = section.offsetTop - headerHeight;
+    
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth"
+    });
   }
 }

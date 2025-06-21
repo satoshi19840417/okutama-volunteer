@@ -12,20 +12,59 @@
   </head>
   <body>
     <header class="header">
-      <nav class="nav-container">
-        <div class="logo">梅澤農園</div>
-        <ul class="nav-links">
-          <li><a href="index.html#about">農園について</a></li>
-          <li><a href="index.html#activities">体験活動</a></li>
-          <li><a href="index.html#gallery">フォトギャラリー</a></li>
-          <li><a href="videos.html" class="active">MV</a></li>
-          <li><a href="index.html#access">アクセス</a></li>
-        </ul>
-      </nav>
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">おくたまふれあい農園ボランティア活動</a>
+        </div>
+        <nav class="nav-container">
+          <ul class="nav-links">
+            <li><a href="index.html#about">農園について</a></li>
+            <li class="nav-item-with-submenu">
+              <a href="activities.html">体験活動</a>
+              <button class="submenu-toggle" aria-label="サブメニューを開く">+</button>
+              <div class="submenu">
+                <a href="activities.html#wasabi">わさび作り体験</a>
+                <a href="activities.html#bbq">川原でBBQ</a>
+                <a href="activities.html#yasai">野菜作り体験</a>
+                <a href="activities.html#pizza">石窯ピザ作り</a>
+                <a href="activities.html#koya">小屋づくり体験</a>
+                <a href="activities.html#gourmet">グルメ体験</a>
+              </div>
+            </li>
+            <li class="nav-item-with-submenu">
+              <a href="mv.html">MV</a>
+              <button class="submenu-toggle" aria-label="サブメニューを開く">+</button>
+              <div class="submenu">
+                <a href="mv.html#video1">私の大切な場所</a>
+                <a href="mv.html#video2">僕らの夢の小屋</a>
+                <a href="mv.html#video3">治歌ちゃんの奥多摩だより</a>
+              </div>
+            </li>
+            <li><a href="index.html#access">アクセス</a></li>
+            <li class="volunteer-link">
+              気になる方は<a
+                href="https://juon.or.jp/activity/activity_164.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >こちら</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button class="hamburger" aria-label="メニュー">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </header>
 
     <main>
       <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+          <source src="hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
           <h1>MVで見る農園の魅力</h1>
           <p>四季折々の農園活動の様子をご紹介</p>
@@ -38,7 +77,12 @@
           <div class="video-grid">
             <div class="video-card" onclick="showVideo('video1')">
               <div class="video-thumbnail">
-                <img src="images/私の大切な場所.jpg" alt="私の大切な場所" loading="lazy" decoding="async" />
+                <img
+                  src="images/私の大切な場所.jpg"
+                  alt="私の大切な場所"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div class="play-overlay">
                   <i class="fas fa-play"></i>
                 </div>
@@ -48,7 +92,12 @@
             </div>
             <div class="video-card" onclick="showVideo('video2')">
               <div class="video-thumbnail">
-                <img src="images/僕らの夢の小屋.jpg" alt="僕らの夢の小屋" loading="lazy" decoding="async" />
+                <img
+                  src="images/僕らの夢の小屋.jpg"
+                  alt="僕らの夢の小屋"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div class="play-overlay">
                   <i class="fas fa-play"></i>
                 </div>
@@ -61,7 +110,8 @@
                 <img
                   src="images/治歌ちゃんの奥多摩だより.jpg"
                   alt="治歌ちゃんの奥多摩だより"
-                  loading="lazy" decoding="async"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="play-overlay">
                   <i class="fas fa-play"></i>
@@ -97,6 +147,24 @@
         </div>
       </section>
     </main>
+
+    <!-- ボトムナビゲーション -->
+    <nav class="bottom-nav">
+      <div class="bottom-nav-container">
+        <a href="index.html" class="bottom-nav-item">
+          <i class="fas fa-home bottom-nav-icon"></i>
+          <span class="bottom-nav-text">ホーム</span>
+        </a>
+        <a href="activities.html" class="bottom-nav-item">
+          <i class="fas fa-camera bottom-nav-icon"></i>
+          <span class="bottom-nav-text">フォト</span>
+        </a>
+        <a href="mv.html" class="bottom-nav-item active">
+          <i class="fas fa-play-circle bottom-nav-icon"></i>
+          <span class="bottom-nav-text">MV</span>
+        </a>
+      </div>
+    </nav>
 
     <div id="videoModal" class="modal">
       <div class="modal-content">

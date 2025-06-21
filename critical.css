@@ -107,19 +107,26 @@ body {
 /* ヒーローセクション - Above the fold */
 .hero {
   height: 75vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+  overflow: hidden;
 }
 
-.hero::before {
-  content: "";
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -192,6 +199,18 @@ img.loaded {
   .nav-links a {
     color: #fff;
     font-size: 1.2rem;
+  }
+
+  /* ヒーロー動画のレスポンシブ対応 */
+  .hero-video {
+    display: none;
+  }
+
+  .hero {
+    background-image: url("images/農園画像.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .hero h1 {
